@@ -244,7 +244,14 @@
         }
     });
 
-    //Contact Form - Netlify Forms
+    // Formspark Configuration
+    // Replace these with your Formspark form IDs from https://formspark.io
+    var FORMSPARK_CONFIG = {
+        contactForm: 'LIAVJSrnY',  // Replace with your contact form ID
+        quoteForm: 'LIAVJSrnY'       // Replace with your quote form ID
+    };
+
+    //Contact Form - Formspark
     $(function () {
         $('#contact-form').on('submit', function (e) {
             e.preventDefault();
@@ -261,18 +268,19 @@
             // Serialize form data
             var formData = $form.serialize();
             
-            // Submit to Netlify Forms endpoint
+            // Submit to Formspark endpoint
             $.ajax({
                 type: "POST",
-                url: "/",
+                url: 'https://submit-form.com/' + FORMSPARK_CONFIG.contactForm,
                 data: formData,
-                success: function () {
+                dataType: 'json',
+                success: function (response) {
                     var alertBox = '<div class="alert alert-success br-0 bg-gradient-2">Message sent successfully. Thank you, will get back to you soon!</div>';
                     $messages.html(alertBox);
                     $form[0].reset(); // form reset
                     $submitBtn.prop('disabled', false).html(originalBtnText);
                 },
-                error: function () {
+                error: function (xhr, status, error) {
                     var alertBox = '<div class="alert alert-danger br-0 bg-gradient-5">There was an error while submitting the form. Please try again later.</div>';
                     $messages.html(alertBox);
                     $submitBtn.prop('disabled', false).html(originalBtnText);
@@ -281,7 +289,7 @@
         });
     });
 
-    //Quote Form - Netlify Forms
+    //Quote Form - Formspark
     $(function () {
         $('#quote-form').on('submit', function (e) {
             e.preventDefault();
@@ -297,18 +305,19 @@
             // Serialize form data
             var formData = $form.serialize();
             
-            // Submit to Netlify Forms endpoint
+            // Submit to Formspark endpoint
             $.ajax({
                 type: "POST",
-                url: "/",
+                url: 'https://submit-form.com/' + FORMSPARK_CONFIG.quoteForm,
                 data: formData,
-                success: function () {
+                dataType: 'json',
+                success: function (response) {
                     var alertBox = '<div class="alert alert-success br-0 bg-gradient-2 text-white">Quote request sent successfully! We\'ll get back to you within 1 hour.</div>';
                     $messages.html(alertBox);
                     $form[0].reset(); // form reset
                     $submitBtn.prop('disabled', false).html(originalBtnText);
                 },
-                error: function () {
+                error: function (xhr, status, error) {
                     var alertBox = '<div class="alert alert-danger br-0 bg-gradient-5 text-white">There was an error while submitting your request. Please try again later.</div>';
                     $messages.html(alertBox);
                     $submitBtn.prop('disabled', false).html(originalBtnText);

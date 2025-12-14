@@ -1,7 +1,9 @@
 [build]
   publish = "."
 
+# Only redirect actual 404s to index.html (for better error handling)
+# This allows all existing HTML files to be accessed directly
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status = 404

@@ -74,31 +74,43 @@ netlify deploy --prod
 
 ## Contact Form Setup
 
-All forms have been configured to use **Netlify Forms**:
+All forms have been configured to use **Formspark**:
 
 - ✅ Contact form (`contact.html`) - fully configured
 - ✅ Quote form (`index.html`) - fully configured
 - ✅ Quote form (`quote.html`) - fully configured
-- ✅ All forms include `netlify` attribute
 - ✅ JavaScript handlers added for all forms
 - ✅ Honeypot spam protection added to all forms
 - ✅ All form fields have proper `name` attributes
 
+### Setup Formspark
+
+1. **Sign up for Formspark**: Visit [https://formspark.io](https://formspark.io) and create a free account
+2. **Create Forms**:
+   - Create a form for contact submissions
+   - Create a form for quote requests
+3. **Get Form IDs**: Copy the form IDs from your Formspark dashboard
+4. **Update Configuration**: 
+   - Open `assets/js/master.js`
+   - Find the `FORMSPARK_CONFIG` object (around line 247)
+   - Replace `YOUR_CONTACT_FORM_ID` with your contact form ID
+   - Replace `YOUR_QUOTE_FORM_ID` with your quote form ID
+
 ### View Form Submissions
 
-1. Go to your Netlify dashboard
-2. Click on your site
-3. Navigate to **Forms** tab
-4. View all form submissions here
+1. Go to your Formspark dashboard at [https://formspark.io](https://formspark.io)
+2. Click on your forms
+3. View all submissions in real-time
 
 ### Email Notifications
 
-To receive email notifications for form submissions:
+Formspark automatically sends email notifications for form submissions:
 
-1. Go to **Site settings** → **Forms** → **Form notifications**
-2. Click **"Add notification"**
-3. Choose **"Email notifications"**
-4. Enter your email address (e.g., `hello@oabwebagency.com`)
+1. Go to your Formspark dashboard
+2. Click on a form
+3. Navigate to **Settings** → **Notifications**
+4. Configure email notifications (sent to your account email by default)
+5. You can also set up webhooks or integrations
 
 ## Important Notes
 
@@ -119,9 +131,10 @@ To receive email notifications for form submissions:
 ## Troubleshooting
 
 ### Form Not Working?
-- Make sure the form has `netlify` attribute
+- Make sure you've updated the Formspark form IDs in `assets/js/master.js`
 - Check browser console for errors
-- Verify form submissions in Netlify dashboard → Forms
+- Verify form submissions in your Formspark dashboard
+- Ensure your Formspark forms are active and not deleted
 
 ### Images Not Loading?
 - Check that image paths are relative (e.g., `assets/images/logo.png`)
@@ -133,11 +146,13 @@ To receive email notifications for form submissions:
 
 ## Next Steps
 
-1. ✅ Deploy to Netlify
-2. ✅ Test your contact form
-3. ✅ Set up email notifications
-4. ✅ Configure custom domain (optional)
-5. ✅ Enable HTTPS (automatic with Netlify)
+1. ✅ Sign up for Formspark and create forms
+2. ✅ Update form IDs in `assets/js/master.js`
+3. ✅ Deploy to Netlify
+4. ✅ Test your contact and quote forms
+5. ✅ Configure email notifications in Formspark
+6. ✅ Configure custom domain (optional)
+7. ✅ Enable HTTPS (automatic with Netlify)
 
 ## Support
 
