@@ -74,11 +74,15 @@ netlify deploy --prod
 
 ## Contact Form Setup
 
-Your contact form has been configured to use **Netlify Forms**:
+All forms have been configured to use **Netlify Forms**:
 
-- ✅ Form includes `netlify` attribute
-- ✅ JavaScript updated to work with Netlify Forms
-- ✅ Honeypot spam protection added
+- ✅ Contact form (`contact.html`) - fully configured
+- ✅ Quote form (`index.html`) - fully configured
+- ✅ Quote form (`quote.html`) - fully configured
+- ✅ All forms include `netlify` attribute
+- ✅ JavaScript handlers added for all forms
+- ✅ Honeypot spam protection added to all forms
+- ✅ All form fields have proper `name` attributes
 
 ### View Form Submissions
 

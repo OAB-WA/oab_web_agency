@@ -3,10 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>OAB Web Agency - Corporate Business HTML5 Template</title>
+    <title>Get a Quote | OAB Web Agency - Request Your Website Project Quote</title>
+    <meta name="description" content="Request a quote for your service business website. Fast, affordable website templates for plumbers, HVAC companies, dentists, cleaning services, electricians, and roofing contractors.">
 
-    <!-- Favicon -->
-    <link href="assets/images/favicon.png" rel="shortcut icon">
+    <!-- Favicon - Multiple sizes (default to light logo, will be updated by JS based on theme) -->
+    <link rel="icon" href="assets/images/logo_light.webp" sizes="16x16" type="image/webp">
+    <link rel="icon" href="assets/images/logo_light.webp" sizes="32x32" type="image/webp">
+    <link rel="icon" href="assets/images/logo_light.webp" sizes="96x96" type="image/webp">
+    <link rel="icon" href="assets/images/logo_light.webp" sizes="192x192" type="image/webp">
+    <link rel="apple-touch-icon" href="assets/images/logo_light.webp" sizes="180x180" type="image/webp">
+    <link rel="shortcut icon" href="assets/images/logo_light.webp" sizes="32x32" type="image/webp">
+
+    <!-- OpenGraph Meta Tags (default to light logo, will be updated by JS based on theme) -->
+    <meta property="og:title" content="Get a Quote | OAB Web Agency - Request Your Website Project Quote">
+    <meta property="og:description" content="Request a quote for your service business website. Fast, affordable website templates for plumbers, HVAC companies, dentists, cleaning services, electricians, and roofing contractors.">
+    <meta property="og:image" content="assets/images/logo_light.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oabwebagency.com/quote.html">
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -71,29 +84,35 @@
                 <div class="col-lg-5">
                     <div class="bg-primary border-radius h-100 d-flex align-items-center p-5 wow zoomIn"
                         data-wow-delay="0.9s">
-                        <form>
+                        <form name="quote-form" id="quote-form" netlify netlify-honeypot="bot-field" method="POST">
+                            <input type="hidden" name="form-name" value="quote-form">
+                            <p style="display: none;">
+                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                            </p>
                             <div class="row g-3">
                                 <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-radius" placeholder="Your Name">
+                                    <input type="text" name="name" class="form-control bg-light border-radius" placeholder="Your Name" required>
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-radius" placeholder="Your Email">
+                                    <input type="email" name="email" class="form-control bg-light border-radius" placeholder="Your Email" required>
                                 </div>
                                 <div class="col-12">
-                                    <select class="form-select bg-light border-radius form-control">
-                                        <option selected>Select a Template</option>
+                                    <select name="template" class="form-select bg-light border-radius form-control" required>
+                                        <option value="">Select a Template</option>
                                         <option value="template1">Template 1 - Modern Business</option>
                                         <option value="template2">Template 2 - Creative Portfolio</option>
                                         <option value="custom">Custom Template Request</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-radius" rows="3" placeholder="Briefly describe your project..."></textarea>
+                                    <textarea name="message" class="form-control bg-light border-radius" rows="3" placeholder="Briefly describe your project..." required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-dark w-100 fw-medium py-3 border-radius" type="submit">Get Quote</button>
                                 </div>
                             </div>
+                            <!-- Submit result -->
+                            <div class="messages mt-3"></div>
                         </form>
                     </div>
                 </div>
