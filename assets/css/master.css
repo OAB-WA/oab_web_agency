@@ -6,6 +6,28 @@
     --dark: #141414;
 }
 
+/* Font display optimization for icon fonts */
+@font-face {
+    font-family: "Font Awesome 6 Free";
+    font-display: swap;
+}
+@font-face {
+    font-family: "Font Awesome 6 Brands";
+    font-display: swap;
+}
+@font-face {
+    font-family: "Font Awesome 5 Brands";
+    font-display: swap;
+}
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-display: swap;
+}
+@font-face {
+    font-family: "FontAwesome";
+    font-display: swap;
+}
+
 .bg-primary {
     background-color: #003d7a !important;
 }

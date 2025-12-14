@@ -13,7 +13,7 @@
                 <div class="carousel-inner">
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
-                        <img class="w-100" src="assets/images/carousel-1.png" alt="Creative Agency Slide 1">
+                        <img class="w-100" src="assets/images/carousel-1.png" alt="Creative Agency Slide 1" width="1920" height="1080" fetchpriority="high" loading="eager">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 900px;">
                                 <h3 class="text-white text-uppercase mb-3 animated slideInDown fw-light">Professional Websites for Service Businesses</h3>
@@ -29,7 +29,7 @@
             
                     <!-- Slide 2 -->
                     <div class="carousel-item">
-                        <img class="w-100" src="assets/images/carousel-2.png" alt="Creative Agency Slide 2">
+                        <img class="w-100" src="assets/images/carousel-2.png" alt="Creative Agency Slide 2" width="1920" height="1080" loading="lazy">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 900px;">
                                 <h3 class="text-white text-uppercase mb-3 animated slideInDown fw-light">Perfect for Service Businesses</h3>
