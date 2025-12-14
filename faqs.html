@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Frequently Asked Questions | OAB Web Agency - FAQ</title>
+    <meta name="description" content="Find answers to common questions about our website templates, pricing, customization, hosting, and services for service businesses.">
+
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="shortcut icon">
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link href="assets/css/master.css" rel="stylesheet">
+    
+    <!-- FAQ Page Styles -->
+    <style>
+        .faq-accordion .accordion-item {
+            border: 1px solid #e9ecef !important;
+            border-radius: 10px !important;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-accordion .accordion-item:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .faq-accordion .accordion-button {
+            background: #f8f9fa;
+            color: #212529;
+            font-weight: 600;
+            padding: 20px 25px;
+            border: none;
+            box-shadow: none;
+        }
+        .faq-accordion .accordion-button:not(.collapsed) {
+            background: var(--primary);
+            color: white;
+            box-shadow: none;
+        }
+        .faq-accordion .accordion-button:not(.collapsed)::after {
+            filter: brightness(0) invert(1);
+        }
+        .faq-accordion .accordion-button:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(0, 61, 122, 0.25);
+        }
+        .faq-accordion .accordion-body {
+            background: white;
+            padding: 25px;
+            line-height: 1.8;
+            color: #6c757d;
+        }
+        .faq-category {
+            background: linear-gradient(135deg, var(--primary) 0%, rgba(0, 61, 122, 0.8) 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .faq-category h3 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .faq-search {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .faq-search input {
+            padding: 15px 50px 15px 20px;
+            border-radius: 50px;
+            border: 2px solid #e9ecef;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .faq-search input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(0, 61, 122, 0.15);
+            outline: none;
+        }
+        .faq-search i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header will be loaded here by load-components.js -->
+    <div id="header-container"></div>
+
+    <!-- FAQ Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 700px;">
+                <h5 class="fw-bold text-primary text-uppercase">FAQs</h5>
+                <h1 class="mb-0">Frequently Asked Questions</h1>
+                <p class="mt-3">Have questions? We've got answers. Here are the most common questions about our website services for service businesses.</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8">
+                    <div class="faq-search">
+                        <input type="text" id="faqSearch" placeholder="Search for questions..." class="form-control">
+                        <i class="bi bi-search"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- General Questions -->
+                    <div class="faq-category">
+                        <h3><i class="bi bi-question-circle me-2"></i>General Questions</h3>
+                    </div>
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                        <!-- FAQ Item 1 -->
+                        <div class="accordion-item" data-category="general">
+                            <h2 class="accordion-header" id="faqHeading1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                                    How long does it take to build my website?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our template-based approach means we can get your website live much faster than custom development. Typically, your website will be ready within 5-10 business days after you provide all necessary content and approve the template selection. The exact timeline depends on your chosen plan and the number of revisions needed.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="accordion-item" data-category="general">
+                            <h2 class="accordion-header" id="faqHeading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                    What's included in the website package?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Each package includes template selection, customization with your branding and content, responsive design (mobile-friendly), basic SEO setup, and the number of pages specified in your plan. Hosting and domain are not included in the initial project price but are available through our monthly retainer plans.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="accordion-item" data-category="general">
+                            <h2 class="accordion-header" id="faqHeading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                    What types of service businesses do you work with?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We specialize in websites for service-based businesses including plumbers, HVAC contractors, dentists, cleaning services, electricians, roofing contractors, landscapers, and many other local service businesses. Our templates and customization are designed to highlight your services, service areas, and help customers find you online.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="accordion-item" data-category="general">
+                            <h2 class="accordion-header" id="faqHeading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                    Will my website work on mobile devices?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! All our templates are fully responsive, meaning they automatically adapt to any screen size - from desktop computers to tablets and smartphones. Your website will look great and function perfectly on all devices, which is essential since many customers search for service businesses on their phones.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pricing & Plans -->
+                        <div class="faq-category mt-5">
+                            <h3><i class="bi bi-currency-dollar me-2"></i>Pricing & Plans</h3>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="accordion-item" data-category="pricing">
+                            <h2 class="accordion-header" id="faqHeading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                    How many revisions are included?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Revision rounds vary by plan: Basic Plan includes 1 revision round, Professional Plan includes 3 revision rounds, and Enterprise Plan includes 5 revision rounds. A revision round allows you to request changes to the design, content, or functionality. We work with you to ensure your website meets your expectations before launch.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 6 -->
+                        <div class="accordion-item" data-category="pricing">
+                            <h2 class="accordion-header" id="faqHeading6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                                    What's the difference between the pricing plans?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The main differences are the number of pages, level of customization, and revision rounds. The Basic Plan ($299) includes up to 5 pages and 1 revision round. The Professional Plan ($599) includes up to 10 pages, full customization, and 3 revision rounds. The Enterprise Plan ($999) includes up to 15 pages, advanced customization, and 5 revision rounds. All plans include template selection, responsive design, and basic SEO setup.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 7 -->
+                        <div class="accordion-item" data-category="pricing">
+                            <h2 class="accordion-header" id="faqHeading7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+                                    Do you offer payment plans?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we offer flexible payment options. You can pay 50% upfront to start the project and 50% upon completion. For Enterprise plans, we can discuss custom payment arrangements. All monthly retainer plans are billed monthly and can be cancelled anytime.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Customization & Templates -->
+                        <div class="faq-category mt-5">
+                            <h3><i class="bi bi-palette me-2"></i>Customization & Templates</h3>
+                        </div>
+
+                        <!-- FAQ Item 8 -->
+                        <div class="accordion-item" data-category="customization">
+                            <h2 class="accordion-header" id="faqHeading8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
+                                    Can I customize the template after it's built?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! During the initial build, we customize the template with your branding, content, and business information. After launch, you can request changes through our monthly retainer plans (which include content update hours) or request one-time updates for an additional fee. We're here to help your website grow with your business.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 9 -->
+                        <div class="accordion-item" data-category="customization">
+                            <h2 class="accordion-header" id="faqHeading9">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse9" aria-expanded="false" aria-controls="faqCollapse9">
+                                    Can I see the templates before choosing?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse9" class="accordion-collapse collapse" aria-labelledby="faqHeading9" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! Visit our <a href="templates.html" class="text-primary">Template Gallery</a> page to browse all available templates. You can see previews, read descriptions, and filter by service type. Once you've found a template you like, you can request a quote and we'll customize it for your business.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 10 -->
+                        <div class="accordion-item" data-category="customization">
+                            <h2 class="accordion-header" id="faqHeading10">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse10" aria-expanded="false" aria-controls="faqCollapse10">
+                                    What if I want a custom design instead of a template?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse10" class="accordion-collapse collapse" aria-labelledby="faqHeading10" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We specialize in template-based websites for fast, affordable delivery. However, if you need a completely custom design, we can discuss custom development options. Custom designs typically take longer and cost more, but we're happy to provide a quote based on your specific requirements.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hosting & Support -->
+                        <div class="faq-category mt-5">
+                            <h3><i class="bi bi-server me-2"></i>Hosting & Support</h3>
+                        </div>
+
+                        <!-- FAQ Item 11 -->
+                        <div class="accordion-item" data-category="hosting">
+                            <h2 class="accordion-header" id="faqHeading11">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse11" aria-expanded="false" aria-controls="faqCollapse11">
+                                    Do you provide hosting and domain services?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse11" class="accordion-collapse collapse" aria-labelledby="faqHeading11" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! All our monthly retainer plans include website hosting, SSL certificate, and regular backups. We can also help you purchase and set up your domain name. If you already have hosting, we can work with your existing setup, though we recommend our hosting for optimal performance and support.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 12 -->
+                        <div class="accordion-item" data-category="hosting">
+                            <h2 class="accordion-header" id="faqHeading12">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse12" aria-expanded="false" aria-controls="faqCollapse12">
+                                    Can I make changes after the website is launched?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse12" class="accordion-collapse collapse" aria-labelledby="faqHeading12" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! We offer monthly retainer plans that include content updates, maintenance, and support. The Professional and Enterprise retainer plans include monthly content update hours, so you can make changes to your website as your business grows. You can also request one-time updates for an additional fee.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 13 -->
+                        <div class="accordion-item" data-category="hosting">
+                            <h2 class="accordion-header" id="faqHeading13">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse13" aria-expanded="false" aria-controls="faqCollapse13">
+                                    What kind of support do you provide?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse13" class="accordion-collapse collapse" aria-labelledby="faqHeading13" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Support varies by retainer plan. The Starter Retainer includes email support. The Professional Retainer includes priority email and phone support. The Enterprise Retainer includes 24/7 priority support and a dedicated account manager. All plans include hosting, SSL certificates, backups, and security updates.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SEO & Marketing -->
+                        <div class="faq-category mt-5">
+                            <h3><i class="bi bi-search me-2"></i>SEO & Marketing</h3>
+                        </div>
+
+                        <!-- FAQ Item 14 -->
+                        <div class="accordion-item" data-category="seo">
+                            <h2 class="accordion-header" id="faqHeading14">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse14" aria-expanded="false" aria-controls="faqCollapse14">
+                                    Do you help with local SEO?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse14" class="accordion-collapse collapse" aria-labelledby="faqHeading14" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! We optimize your website for local search, which is crucial for service businesses. This includes setting up Google Business Profile integration, optimizing for local keywords, creating service area pages, and ensuring your contact information is easily accessible. Local SEO helps customers in your area find you when they search for your services.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 15 -->
+                        <div class="accordion-item" data-category="seo">
+                            <h2 class="accordion-header" id="faqHeading15">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse15" aria-expanded="false" aria-controls="faqCollapse15">
+                                    Will my website show up on Google?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse15" class="accordion-collapse collapse" aria-labelledby="faqHeading15" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! All our websites include basic SEO setup to help Google find and index your site. We optimize your content, meta tags, and structure for search engines. However, ranking well on Google takes time and depends on many factors including your content, local competition, and ongoing SEO efforts. We can help you with local SEO optimization as part of your website package.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 16 -->
+                        <div class="accordion-item" data-category="seo">
+                            <h2 class="accordion-header" id="faqHeading16">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse16" aria-expanded="false" aria-controls="faqCollapse16">
+                                    What are service area pages?
+                                </button>
+                            </h2>
+                            <div id="faqCollapse16" class="accordion-collapse collapse" aria-labelledby="faqHeading16" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Service area pages are dedicated pages on your website for each city or neighborhood you serve. These pages help you rank for local searches like "plumber in [City Name]" or "HVAC contractor in [Neighborhood]". They're especially valuable for service businesses that serve multiple locations. We can create these pages as part of your website package.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="text-center mt-5">
+                        <div class="bg-primary border-radius p-5 wow fadeInUp" data-wow-delay="0.3s">
+                            <h2 class="text-white mb-3">Still Have Questions?</h2>
+                            <p class="text-white mb-4">Can't find the answer you're looking for? We're here to help! Get in touch with our team and we'll respond as soon as possible.</p>
+                            <a href="contact.html" class="btn btn-light border-radius py-3 px-5 me-3">Contact Us</a>
+                            <a href="quote.html" class="btn btn-outline-light border-radius py-3 px-5">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ End -->
+
+    <!-- Footer will be loaded here by load-components.js -->
+    <div id="footer-container"></div>
+
+    <!-- Libraries -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/lib/wow/wow.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
+    <script src="assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="assets/lib/counterup/counterup.min.js"></script>
+    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    
+    <!-- Component Loader - Must be loaded before master.js -->
+    <script src="assets/js/load-components.js"></script>
+    
+    <!-- FAQ Search Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('faqSearch');
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                accordionItems.forEach(item => {
+                    const question = item.querySelector('.accordion-button').textContent.toLowerCase();
+                    const answer = item.querySelector('.accordion-body').textContent.toLowerCase();
+                    const matches = question.includes(searchTerm) || answer.includes(searchTerm);
+                    
+                    if (searchTerm === '' || matches) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- Javascript -->
+    <script src="assets/js/master.js"></script>
+    <script src="assets/js/validator.js"></script>
+</body>
+
+</html>
