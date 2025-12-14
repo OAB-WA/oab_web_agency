@@ -23,29 +23,50 @@
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- Google Web Fonts -->
+    <!-- Preconnect to external domains for faster resource loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="https://submit-form.com">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="assets/images/logo_dark.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/images/logo_light.webp" as="image" type="image/webp">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="assets/css/all.min.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Teko:wght@300..700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet"></noscript>
 
-    <!-- Libraries Stylesheet -->
-    <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Critical CSS - Load immediately -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Stylesheet -->
     <link href="assets/css/master.css" rel="stylesheet">
+
+    <!-- Non-critical CSS - Load asynchronously -->
+    <link href="assets/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="assets/css/all.min.css" rel="stylesheet"></noscript>
+    <link href="assets/css/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="assets/css/bootstrap-icons.css" rel="stylesheet"></noscript>
+    <link href="assets/lib/animate/animate.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="assets/lib/animate/animate.min.css" rel="stylesheet"></noscript>
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"></noscript>
+    
+    <!-- Script to handle async CSS loading -->
+    <script>
+        // Async CSS loading fallback
+        (function() {
+            var links = document.querySelectorAll('link[media="print"]');
+            for (var i = 0; i < links.length; i++) {
+                links[i].media = 'all';
+            }
+        })();
+    </script>
 </head>
 
 <body>
         <!-- Header will be loaded here by load-components.js -->
     <div id="header-container"></div>
+    
+    <main>
 
     <!-- Contact Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -161,23 +182,24 @@
     
         <!-- Footer will be loaded here by load-components.js -->
     <div id="footer-container"></div>
+    </main>
 
 
-    <!-- Libraries -->
+    <!-- Libraries - Load critical scripts normally, defer non-critical -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/lib/wow/wow.min.js"></script>
-    <script src="assets/lib/easing/easing.min.js"></script>
-    <script src="assets/lib/waypoints/waypoints.min.js"></script>
-    <script src="assets/lib/counterup/counterup.min.js"></script>
-    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="assets/lib/wow/wow.min.js" defer></script>
+    <script src="assets/lib/easing/easing.min.js" defer></script>
+    <script src="assets/lib/waypoints/waypoints.min.js" defer></script>
+    <script src="assets/lib/counterup/counterup.min.js" defer></script>
+    <script src="assets/lib/owlcarousel/owl.carousel.min.js" defer></script>
     
     <!-- Component Loader - Must be loaded before master.js -->
-    <script src="assets/js/load-components.js"></script>
+    <script src="assets/js/load-components.js" defer></script>
     
-    <!-- Javascript -->
-    <script src="assets/js/master.js"></script>
-    <script src="assets/js/validator.js"></script>
+    <!-- Javascript - Load after dependencies are ready -->
+    <script src="assets/js/master.js" defer></script>
+    <script src="assets/js/validator.js" defer></script>
 </body>
 
 </html>
