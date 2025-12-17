@@ -6,6 +6,39 @@
 (function() {
     'use strict';
 
+    /**
+     * Inject Google Analytics into head section
+     * This runs immediately to ensure early loading
+     */
+    function injectGoogleAnalytics() {
+        // Check if already injected (avoid duplicates)
+        if (document.querySelector('script[src*="googletagmanager.com"]')) {
+            return;
+        }
+
+        // Initialize dataLayer immediately
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-XHY30JC19X');
+
+        // Create and inject the async script
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XHY30JC19X';
+        document.head.appendChild(script);
+    }
+
+    // Inject Google Analytics immediately (runs as soon as script is parsed)
+    // This works even if script is loaded at bottom of body
+    if (document.head) {
+        injectGoogleAnalytics();
+    } else {
+        // If head doesn't exist yet, wait for it
+        document.addEventListener('DOMContentLoaded', injectGoogleAnalytics);
+    }
+
     // Page-specific header content configuration
     const pageHeaders = {
         'index': `
