@@ -312,10 +312,15 @@
                 data: formData,
                 dataType: 'json',
                 success: function (response) {
-                    var alertBox = '<div class="alert alert-success br-0 bg-gradient-2 text-white">Quote request sent successfully! We\'ll get back to you within 1 hour.</div>';
+                    var alertBox = '<div class="alert alert-success br-0 bg-gradient-2 text-white">Quote request sent successfully! Redirecting to schedule your call...</div>';
                     $messages.html(alertBox);
                     $form[0].reset(); // form reset
                     $submitBtn.prop('disabled', false).html(originalBtnText);
+                    
+                    // Redirect to booking page after 2 seconds
+                    setTimeout(function() {
+                        window.location.href = 'booking.html';
+                    }, 2000);
                 },
                 error: function (xhr, status, error) {
                     var alertBox = '<div class="alert alert-danger br-0 bg-gradient-5 text-white">There was an error while submitting your request. Please try again later.</div>';
