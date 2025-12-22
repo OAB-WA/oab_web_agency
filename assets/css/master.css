@@ -2206,3 +2206,37 @@ select {
 .custom-select.select-fullwidth {
   width: 100%;
 }
+
+#navbar-logo {
+  height: 150px;
+  width: 200px;
+}   
+
+@media (max-width: 991.98px) {
+  #navbar-logo {
+    height: 80px;
+    width: 100px;
+  }
+}
+
+#header-carousel {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+} 
+
+#header-carousel img {
+  height: 100vh !important;
+  width: 100% !important;
+  object-fit: cover;
+}
+@media (max-width: 991.98px) {
+  #header-carousel {
+    height: 50vh !important;
+  }
+  #header-carousel img {
+    height: 50vh !important;
+  }
+} 
+
+
